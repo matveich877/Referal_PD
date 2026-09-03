@@ -415,6 +415,27 @@
     display:block;
     margin-top:4px;
   }
+  .wh-card-link{
+    display:block;
+    transition:transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+  }
+  .wh-card-link:hover,
+  .wh-card-link:focus-visible{
+    transform:translateY(-3px);
+    border-color:var(--kraft);
+    box-shadow:0 10px 22px rgba(28,27,24,0.1);
+  }
+  .wh-card-cta{
+    margin-top:14px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:6px;
+    font-size:13px;
+    font-weight:700;
+    color:var(--kraft-dark);
+  }
+  .wh-card-arrow{width:14px;height:14px;}
   .wh-roles{
     margin-top:36px;
     display:flex;
@@ -639,7 +660,7 @@
     <div class="wrap hero-grid">
       <div>
         <span class="hero-badge">Не для соискателей — для тех, кто приводит людей</span>
-        <h1>Знакомь людей со складской работой — получай <span class="accent">15 000 ₽</span> за каждого</h1>
+        <h1>Знакомь людей со складской работой — получай <span class="accent">10 000 ₽</span> за каждого</h1>
         <p class="hero-sub">Склады Lemana Pro, Wildberries, «Перекрёсток» и «Магнит» ищут сборщиков, комплектовщиков и подсобных рабочих. Ты просто рассказываешь о вакансии знакомым и оформляешь их через бота — работать на складе самому не нужно.</p>
         <div class="hero-actions">
           <a class="btn btn-yellow" href="http://t.me/rabota_referal_bot" target="_blank" rel="noopener">Стать агентом в Telegram</a>
@@ -647,9 +668,9 @@
         </div>
         <p class="hero-note">Бот для регистрации: t.me/rabota_referal_bot · MAX и WhatsApp: +7 996 038‑77‑29</p>
         <div class="hero-stats">
-          <div class="hero-stat"><b>15 000 ₽</b><span>за 1 друга, вышедшего на 10 смен</span></div>
-          <div class="hero-stat"><b>75 000 ₽</b><span>если привёл 5 человек</span></div>
-          <div class="hero-stat"><b>150 000 ₽</b><span>если привёл 10 человек</span></div>
+          <div class="hero-stat"><b>10 000 ₽</b><span>за 1 друга, вышедшего на 10 смен</span></div>
+          <div class="hero-stat"><b>50 000 ₽</b><span>если привёл 5 человек</span></div>
+          <div class="hero-stat"><b>100 000 ₽</b><span>если привёл 10 человек</span></div>
         </div>
       </div>
       <div class="hero-art">
@@ -722,7 +743,7 @@
         <div class="step">
           <span class="step-num">3</span>
           <h3>Деньги приходят тебе</h3>
-          <p>После 10 отработанных смен друга на твою карту зачисляют 15 000 ₽. Сам ты на складе можешь не появляться ни разу.</p>
+          <p>После 10 отработанных смен друга на твою карту зачисляют 10 000 ₽. Сам ты на складе можешь не появляться ни разу.</p>
         </div>
       </div>
     </div>
@@ -744,15 +765,15 @@
           <input type="range" id="friendsRange" min="1" max="15" value="5" step="1" aria-describedby="friendsValue">
           <div class="calc-scale"><span>1</span><span>15</span></div>
           <div class="calc-milestones">
-            <span class="milestone-chip" data-n="1">1 друг — 15 000 ₽</span>
-            <span class="milestone-chip" data-n="5">5 друзей — 75 000 ₽</span>
-            <span class="milestone-chip" data-n="10">10 друзей — 150 000 ₽</span>
+            <span class="milestone-chip" data-n="1">1 друг — 10 000 ₽</span>
+            <span class="milestone-chip" data-n="5">5 друзей — 50 000 ₽</span>
+            <span class="milestone-chip" data-n="10">10 друзей — 100 000 ₽</span>
           </div>
         </div>
         <div class="calc-result">
           <p class="calc-result-label">Твой доход</p>
-          <p class="calc-result-value" id="calcResult">75 000 ₽</p>
-          <p class="calc-result-note">15 000 ₽ за каждого друга, отработавшего 10 смен</p>
+          <p class="calc-result-value" id="calcResult">50 000 ₽</p>
+          <p class="calc-result-note">10 000 ₽ за каждого друга, отработавшего 10 смен</p>
         </div>
       </div>
     </div>
@@ -767,16 +788,18 @@
         <p>Партнёрская программа работает на площадках четырёх компаний — выбор склада зависит от города и вакансий, открытых сейчас.</p>
       </div>
       <div class="wh-grid">
-        <div class="wh-card">
+        <a class="wh-card wh-card-link" href="lemanapro-ekaterinburg.html">
           <svg class="wh-icon" viewBox="0 0 40 40" aria-hidden="true"><rect x="6" y="14" width="28" height="20" fill="none" stroke="#1C1B18" stroke-width="2.5"/><path d="M6 14 L20 5 L34 14" fill="none" stroke="#1C1B18" stroke-width="2.5"/><rect x="16" y="22" width="8" height="12" fill="#F4BE1E"/></svg>
           <b>Lemana Pro</b>
           <span>Склады строительных товаров</span>
-        </div>
-        <div class="wh-card">
+          <span class="wh-card-cta">Смотреть вакансию<svg class="wh-card-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8H14M14 8L9 3M14 8L9 13" fill="none" stroke="#96703F" stroke-width="1.6"/></svg></span>
+        </a>
+        <a class="wh-card wh-card-link" href="wildberries-ekaterinburg.html">
           <svg class="wh-icon" viewBox="0 0 40 40" aria-hidden="true"><rect x="8" y="10" width="24" height="24" fill="none" stroke="#1C1B18" stroke-width="2.5"/><path d="M8 20 H32 M20 10 V34" stroke="#1C1B18" stroke-width="2.5"/></svg>
           <b>Wildberries</b>
           <span>Склады маркетплейса</span>
-        </div>
+          <span class="wh-card-cta">Смотреть вакансию<svg class="wh-card-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M2 8H14M14 8L9 3M14 8L9 13" fill="none" stroke="#96703F" stroke-width="1.6"/></svg></span>
+        </a>
         <div class="wh-card">
           <svg class="wh-icon" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14" fill="none" stroke="#1C1B18" stroke-width="2.5"/><path d="M20 10 V20 L27 25" stroke="#1C1B18" stroke-width="2.5" fill="none"/></svg>
           <b>«Перекрёсток»</b>
@@ -802,7 +825,7 @@
       <div class="section-head">
         <p class="kicker">Что получает твой друг</p>
         <h2>Условия, о которых приятно рассказывать</h2>
-        <p>Чем лучше условия — тем проще уговорить человека выйти на смены и тем быстрее ты получишь свои 15 000 ₽.</p>
+        <p>Чем лучше условия — тем проще уговорить человека выйти на смены и тем быстрее ты получишь свои 10 000 ₽.</p>
       </div>
       <div class="cond-grid">
         <div class="cond-card">
@@ -901,11 +924,11 @@
         </details>
         <details>
           <summary>Когда именно приходят деньги?<span class="faq-plus"></span></summary>
-          <p>Выплата 15 000 ₽ поступает на карту после того, как приведённый тобой человек отработал 10 смен на складе-партнёре.</p>
+          <p>Выплата 10 000 ₽ поступает на карту после того, как приведённый тобой человек отработал 10 смен на складе-партнёре.</p>
         </details>
         <details>
           <summary>Есть ли ограничение на число друзей?<span class="faq-plus"></span></summary>
-          <p>Нет верхнего предела: 5 друзей — это 75 000 ₽, 10 друзей — 150 000 ₽, и так далее за каждого следующего.</p>
+          <p>Нет верхнего предела: 5 друзей — это 50 000 ₽, 10 друзей — 100 000 ₽, и так далее за каждого следующего.</p>
         </details>
         <details>
           <summary>Что если друг уйдёт раньше 10 смен?<span class="faq-plus"></span></summary>
@@ -928,7 +951,7 @@
     <div class="hazard" aria-hidden="true" style="margin-bottom:0;"></div>
     <div class="wrap" style="padding-top:56px;">
       <h2>Первого друга можно привести уже сегодня</h2>
-      <p>Открой бота, отправь ссылку знакомому — и жди 15 000 ₽ на карту после его 10 смен.</p>
+      <p>Открой бота, отправь ссылку знакомому — и жди 10 000 ₽ на карту после его 10 смен.</p>
       <div class="final-actions">
         <a class="btn btn-yellow" href="http://t.me/rabota_referal_bot" target="_blank" rel="noopener">Открыть бота в Telegram</a>
         <a class="btn btn-outline" href="https://wa.me/79960387729" target="_blank" rel="noopener">Написать в WhatsApp</a>
@@ -957,7 +980,7 @@
 </footer>
 
 <div class="floating-cta" id="floatingCta">
-  <span>15 000 ₽ за друга</span>
+  <span>10 000 ₽ за друга</span>
   <a class="btn btn-yellow btn-sm" href="http://t.me/rabota_referal_bot" target="_blank" rel="noopener">В бота</a>
 </div>
 
@@ -980,7 +1003,7 @@
   function update(){
     var n = parseInt(range.value, 10);
     friendsValue.textContent = n + ' ' + pluralFriends(n);
-    result.textContent = formatMoney(n * 15000);
+    result.textContent = formatMoney(n * 10000);
     chips.forEach(function(chip){
       chip.classList.toggle('active', parseInt(chip.dataset.n,10) === n);
     });
